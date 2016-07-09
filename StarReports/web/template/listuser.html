@@ -1,0 +1,52 @@
+<style>
+
+</style>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">Employee </h3>
+                <span ng-show="showMessage" class="textalign_center">[[ statusmsg ]]</span>
+                <span style="float:right"><a href="" class="btn btn-primary btn-xs" ui-sref="loginsucess.addemployee">Add</a> </span>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <table id="example2" class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Role</th>
+                        <th>Mobile</th>
+                        <th>Department</th>
+                        <th>Designation</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="user in users">
+                        <td>[[ user.username ]]</td>
+                        <td>[[ user.email ]]</td>
+                        <!--<td  ng-if="user.isActive == 1"><i ng-click="deactivateUser(user.id)" class="fa fa-fw fa-toggle-on" style="color:green"></i>
+                        </td>
+                        <td ng-if="user.isActive == 0"><i ng-click="deactivateUser(user.id)" class="fa fa-fw fa-toggle-off" style="color:red"></i>
+                        </td>-->
+                        <td><i ng-class="user.isActive == 1 ? 'fa fa-fw fa-toggle-on green' : 'fa fa-fw fa-toggle-off red'" ng-click="deactivateUser(user.id,$event)" ></i>
+                        </td>
+
+                        <td ng-repeat="role in user.roles">[[ role ]]</td>
+                        <td>[[ user.mobile ]]</td>
+                        <td>[[ user.deptname ]]</td>
+                        <td>[[ user.designame ]]</td>
+                        <td>
+                            <a  href="" ui-sref="loginsucess.edituser({ id: user.id})"><i class="fa fa-fw fa-pencil-square-o" style="color:#0000cc"></i></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

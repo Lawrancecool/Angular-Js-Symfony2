@@ -1,0 +1,18 @@
+
+admin:
+    resource: "@AdminBundle/Controller/AdminController.php"
+    type:     annotation
+    prefix:   /admin
+
+demo:
+    resource: "@DemoBundle/Controller/"
+    type:     annotation
+    prefix:   /demo
+
+user:
+    resource: "@UserBundle/Controller/UserController.php"
+    type:     annotation
+    prefix:   /
+adduser:
+     path:    /newuser
+     defaults: { _controller: "UserBundle:Employee:index" }

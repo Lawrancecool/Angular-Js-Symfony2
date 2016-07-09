@@ -1,0 +1,44 @@
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">Designation </h3>
+                <span style="float:right"><a href="" class="btn btn-primary btn-xs" ui-sref="loginsucess.adddesig">Add</a> </span>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <table id="example2" class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Number of Employee</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for designation in designations %}
+                        <tr>
+
+
+                            <td>{{ designation.name }}</td>
+                            <td>{{ designation.numberEmployee }}</td>
+                            <td><a href="">Edit</a>&nbsp;&nbsp;<a href="">Delete</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                   {# <tfoot>
+                    <tr>
+                        <th>Rendering engine</th>
+                        <th>Browser</th>
+                        <th>Platform(s)</th>
+
+                    </tr>
+                    </tfoot>#}
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,63 @@
+
+
+<div class="box box-default">
+    <div class="box-header with-border">
+        <h3 class="box-title">Designation</h3>
+
+        <div class="box-tools pull-right">
+            <a href="" ui-sref="loginsucess.showall_desig" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-fw fa-th-list"></i></a>{#
+            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>#}
+        </div>
+    </div>
+    <!-- /.box-header -->
+    <form id="dept_form"  action="{{ path('adddesig') }}" method="post"  angular-submit>
+        <div class="box-body">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {#<label>Firstname</label>#}
+                        {{ form_widget(form.name, { 'attr': {'class': 'form-control','placeholder': 'Name','ng-model':'dept_form.email'} }) }}
+                    </div>
+
+                </div>
+                <!-- /.col -->
+                {#<div class="col-md-6">
+                    <div class="form-group required">
+                        <label class="control-label">Lastname</label>
+                        {{ form_widget(form.lname, { 'attr': {'class': 'form-control','placeholder': 'Lastname','ng-model':'reg_form.lname'} }) }}
+                    </div>
+                    <div class="form-group ">
+                        <label>Phone</label>
+                        {{ form_widget(form.mobile, { 'attr': {'class': 'form-control','placeholder': 'Phone','ng-model':'reg_form.mobile'} }) }}
+
+                    </div>
+                    <!-- /.form-group -->
+                    <div class="form-group">
+                        <label>Designation</label>
+                        {{ form_widget(form.desigid, { 'attr': {'class': 'form-control','placeholder': 'Phone','ng-model':'reg_form.desigid'} }) }}
+
+                    </div>
+                    <div class="form-group">
+                        <label>Retype password</label>
+                        {{ form_widget(form.plainPassword, { 'attr': {'class': 'form-control','placeholder': 'Password','ng-model':'reg_form.cpassword'} }) }}
+
+
+                    </div>
+
+                    <!-- /.form-group -->
+                </div>#}
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+
+
+        </div>
+        <div class="box-footer">
+            <button type="submit" class="btn btn-primary pull-right">Add</button>
+        </div>
+    </form>
+
+    <!-- /.box-body -->
+
+</div>
